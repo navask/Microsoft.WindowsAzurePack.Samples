@@ -1,0 +1,30 @@
+﻿@using Microsoft.Portal.Framework;
+@*@using Microsoft.WindowsAzure.Server.SqlAdmin.AdminExtension.Bundles;*@
+@using Microsoft.WindowsAzure.Server.ServiceBus.AdminExtension;
+
+@{
+    ViewBag.Title = "Hello World";
+}
+
+@{
+    Layout = "~/Views/Shared/_LayoutMinimal.cshtml";
+}
+
+<div id="helloWorldAdminQuotasContainer" class="sqlAdminQuotas">
+    <div class="hs-empty">
+        <div class="hs-empty-header">
+            <p id="msg-nothing">Hello World extension does not have any quota configuration. So this page is left BLANK intentionally</p>
+        </div>
+        <div class="hs-empty-sections">
+            <div class="hs-empty-listview">
+                <a href="#" class="arrowlink-right newDatabaseEdition"></a>
+            </div>
+        </div>
+    </div>
+    <div class="gridContainer"></div>
+</div>
+
+
+@section ServiceOfferScripts {
+    <script src="~/Content/HelloWorldAdmin/Scripts/HelloWorldAdmin.ServiceOffer.js"></script>
+}
