@@ -258,7 +258,6 @@
 
   // private: Receives config from host and updates the UI
   function initializeServiceOffer(serviceOffer, planEntityType) {
-    debugger
     var planEditionsColumns;
 
     currentPlanEntity = planEntityType;
@@ -281,9 +280,9 @@
 
     if (serviceOffer) {
       planEditionsColumns = [
-          { name: "Display name", field: "DisplayName", type: "text" },
-          { name: "Instance count", field: "InstanceCount", type: "text" },
-          { name: "Size", field: "Size", type: "text" }
+          { name: "Display name", field: "displayName", type: "text" },
+          { name: "Instance count", field: "instanceCount", type: "text" },
+          { name: "Size", field: "size", type: "text" }
       ];
       /*
                   if (planEntityType === global.ServiceOffer.planEntityEnum.plan) {
@@ -328,8 +327,7 @@
   }
 
   function initializePage() {
-    debugger
-    if (global.ServiceOffer == undefined) {
+    if (!global.ServiceOffer) {
       return;
     }
 
